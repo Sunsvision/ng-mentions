@@ -53,7 +53,8 @@
     "clean:demo": "[[ ! -e demo/dist/ ]] || rm -r demo/dist",
     "clean:demo:deploy": "[[ ! -e .publish/ ]] || rm -fr .publish/",
     "clean:demo:plunks": "[[ ! -e demo/src/public/app/components ]] || rm -r demo/src/public/app/components",
-    "postinstall": "yarn install && yarn build:lib"
+    "preinstall": "yarn install",
+    "postinstall": "yarn build:lib"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.10.0",
