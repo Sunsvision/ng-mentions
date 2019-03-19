@@ -52,9 +52,8 @@
     "clean:test": "[[ ! -e coverage/ ]] || rm -r coverage/",
     "clean:demo": "[[ ! -e demo/dist/ ]] || rm -r demo/dist",
     "clean:demo:deploy": "[[ ! -e .publish/ ]] || rm -fr .publish/",
-    "clean:demo:plunks": "[[ ! -e demo/src/public/app/components ]] || rm -r demo/src/public/app/components"
-  },
-  "dependencies": {
+    "clean:demo:plunks": "[[ ! -e demo/src/public/app/components ]] || rm -r demo/src/public/app/components",
+    "preinstall": "npm run build"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.10.0",
